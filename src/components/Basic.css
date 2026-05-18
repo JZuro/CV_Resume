@@ -1,0 +1,9 @@
+.basic {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic form {
+    display: flex;
+    flex-direction: column;
+}

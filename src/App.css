@@ -181,4 +181,9 @@
     right: 0;
     border-right-color: var(--border);
   }
+ 
 }
+
+ div {
+   margin-bottom: 20px;
+ }

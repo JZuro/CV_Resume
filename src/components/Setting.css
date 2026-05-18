@@ -1,0 +1,9 @@
+.setting {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting form {
+    display: flex;
+    flex-direction: column;
+}
