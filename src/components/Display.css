@@ -1,0 +1,29 @@
+#display {
+    color: black;
+    background-color: white;
+    position: absolute;
+    right:15vw;
+    top: 0;
+    width: 210mm;
+    height: 297mm;
+    zoom: calc(50vw / 297mm);
+            /* scales to fill viewport width */
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+            "sidePanel header header"
+            "sidePanel main main"
+            "sidePanel main main";
+    padding: 50px;
+    
+}
+
+#basic{
+    padding: 50px 10px 50px 10px;
+    background-color: aliceblue;
+    grid-area: sidePanel;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

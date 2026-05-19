@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Setting.css";
 
 export default function Setting({ title, descriptory = true, value = null }) {

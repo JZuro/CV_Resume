@@ -1,7 +1,11 @@
-import { useState } from "react";
 import "./Basic.css";
 
-export default function Basic({ handleNameChange, handleSurnameChange }) {
+export default function Basic({
+	handleNameChange,
+	handleSurnameChange,
+	handleEmailChange,
+	handleTelephoneChange,
+}) {
 	return (
 		<div className="basic">
 			<h2>Basic info:</h2>
@@ -23,9 +27,19 @@ export default function Basic({ handleNameChange, handleSurnameChange }) {
 					onChange={(e) => handleSurnameChange(e.target.value)}
 				/>
 				<label for="email">E-mail:</label>
-				<input type="email" id="email" name="email" />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					onChange={(e) => handleEmailChange(e.target.value)}
+				/>
 				<label for="number">Telephone number:</label>
-				<input type="number" id="number" name="number" />
+				<input
+					type="number"
+					id="number"
+					name="number"
+					onChange={(e) => handleTelephoneChange(e.target.value)}
+				/>
 			</form>
 		</div>
 	);
