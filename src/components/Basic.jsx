@@ -1,5 +1,20 @@
 import "./Basic.css";
 
+function BasicInput({ title, handleChange, placeholder = "" }) {
+	return (
+		<label htmlFor={title}>
+			{title}
+			<input
+				type="text"
+				id={title}
+				name={title}
+				placeholder={placeholder}
+				onChange={(e) => handleChange(e.target.value)}
+			/>
+		</label>
+	);
+}
+
 export default function Basic({
 	handleNameChange,
 	handleSurnameChange,
@@ -7,38 +22,27 @@ export default function Basic({
 	handleTelephoneChange,
 }) {
 	return (
-		<div className="basic">
-			<h2>Basic info:</h2>
+		<div className="edit">
 			<form>
-				<label for="name">First name:</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
+				<BasicInput
+					title="name"
+					handleChange={handleNameChange}
 					placeholder="your first name..."
-					onChange={(e) => handleNameChange(e.target.value)}
 				/>
-				<label for="surname">Surname:</label>
-				<input
-					type="text"
-					id="surname"
-					name="surname"
+				<BasicInput
+					title="surname"
+					handleChange={handleSurnameChange}
 					placeholder="your surname..."
-					onChange={(e) => handleSurnameChange(e.target.value)}
 				/>
-				<label for="email">E-mail:</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					onChange={(e) => handleEmailChange(e.target.value)}
+				<BasicInput
+					title="email"
+					handleChange={handleEmailChange}
+					placeholder="your email..."
 				/>
-				<label for="number">Telephone number:</label>
-				<input
-					type="number"
-					id="number"
-					name="number"
-					onChange={(e) => handleTelephoneChange(e.target.value)}
+				<BasicInput
+					title="telephone"
+					handleChange={handleTelephoneChange}
+					placeholder="your telephone number..."
 				/>
 			</form>
 		</div>

@@ -1,9 +1,15 @@
-.basic {
-    display: flex;
-    flex-direction: column;
-}
 
-.basic form {
-    display: flex;
-    flex-direction: column;
+
+form {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    gap: 20xpx;
+
+    label {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    
+    }
 }
