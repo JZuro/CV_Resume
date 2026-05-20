@@ -19,12 +19,17 @@ function App() {
 				<Setting title="Experience" clickHandle={setEdited} />
 				<Setting title="Education" clickHandle={setEdited} />
 			</div>
-			{(edited === "#editBasic") && (<Basic
-				handleNameChange={setName}
-				handleSurnameChange={setSurname}
-				handleEmailChange={setEmail}
-				handleTelephoneChange={setTelephone}
-			/>)}
+			<div
+				className="edit"
+				hidden={edited !== "#editBasic"}
+			>
+				<Basic
+					handleNameChange={setName}
+					handleSurnameChange={setSurname}
+					handleEmailChange={setEmail}
+					handleTelephoneChange={setTelephone}
+				/>
+			</div>
 			<Display
 				name={name}
 				surname={surname}

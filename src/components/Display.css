@@ -1,4 +1,6 @@
 .display {
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
     background-color: white;
     width: 210mm;
@@ -22,3 +24,4 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
