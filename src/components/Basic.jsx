@@ -1,6 +1,12 @@
 import "./Basic.css";
 
-function BasicInput({ title, handleChange, placeholder = "", type="text", autocomplete="" }) {
+function BasicInput({
+	title,
+	handleChange,
+	placeholder = "",
+	type = "text",
+	autocomplete = "",
+}) {
 	return (
 		<label htmlFor={title}>
 			{title}
@@ -23,35 +29,33 @@ export default function Basic({
 	handleTelephoneChange,
 }) {
 	return (
-		<div className="edit">
-			<form>
-				<BasicInput
-					title="name"
-					handleChange={handleNameChange}
-					placeholder="your first name..."
-					autocomplete="given-name"
-				/>
-				<BasicInput
-					title="surname"
-					handleChange={handleSurnameChange}
-					placeholder="your surname..."
-					autocomplete="family-name"
-				/>
-				<BasicInput
-					title="email"
-					handleChange={handleEmailChange}
-					placeholder="your email..."
-					autocomplete="email"
-					type="email"
-				/>
-				<BasicInput
-					title="telephone"
-					handleChange={handleTelephoneChange}
-					placeholder="your telephone number..."
-					autocomplete="tel"
-					type="tel"
-				/>
-			</form>
-		</div>
+		<form>
+			<BasicInput
+				title="Name"
+				handleChange={handleNameChange}
+				placeholder="your first name..."
+				autocomplete="given-name"
+			/>
+			<BasicInput
+				title="Surname"
+				handleChange={handleSurnameChange}
+				placeholder="your surname..."
+				autocomplete="family-name"
+			/>
+			<BasicInput
+				title="Email"
+				handleChange={handleEmailChange}
+				placeholder="your email..."
+				autocomplete="email"
+				type="email"
+			/>
+			<BasicInput
+				title="Telephone"
+				handleChange={handleTelephoneChange}
+				placeholder="your telephone number..."
+				autocomplete="tel"
+				type="tel"
+			/>
+		</form>
 	);
 }

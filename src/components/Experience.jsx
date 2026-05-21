@@ -7,36 +7,42 @@ function ExperienceInput({
 }) {
 	return (
 		<fieldset id={id}>
-			<input
-				className="experienceTitle"
-				type="text"
-				placeholder={"name your experience..."}
-				id={id + "Title"}
-				onChange={(e) =>
-					handleChange({
-						...experience,
-						[id]: {
-							...experience?.[id],
-							title: e.target.value,
-						},
-					})
-				}
-			/>
-			<textarea
-				className="experienceDescription"
-				type="text"
-				placeholder={"describe your experience..."}
-				id={id + "Description"}
-				onChange={(e) =>
-					handleChange({
-						...experience,
-						[id]: {
-							...experience?.[id],
-							description: e.target.value,
-						},
-					})
-				}
-			/>
+			<label htmlFor={id + "Title"}>
+				Experience
+				<input
+					className="experienceTitle"
+					type="text"
+					placeholder={"name your experience..."}
+					id={id + "Title"}
+					onChange={(e) =>
+						handleChange({
+							...experience,
+							[id]: {
+								...experience?.[id],
+								title: e.target.value,
+							},
+						})
+					}
+				/>
+			</label>
+			<label htmlFor={id + "Title"}>
+				Description
+				<textarea
+					className="experienceDescription"
+					type="text"
+					placeholder={"describe your experience..."}
+					id={id + "Description"}
+					onChange={(e) =>
+						handleChange({
+							...experience,
+							[id]: {
+								...experience?.[id],
+								description: e.target.value,
+							},
+						})
+					}
+				/>
+			</label>
 			<button
 				onClick={(event) => {
 					event.preventDefault();

@@ -1,15 +1,6 @@
-
-
 form {
-	display: flex;
-	flex-direction: column;
-    justify-content: space-between;
-    gap: 20xpx;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 
-    label {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-    
-    }
 }

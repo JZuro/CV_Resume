@@ -4,6 +4,7 @@ import Setting from "./components/Setting.jsx";
 import Basic from "./components/Basic.jsx";
 import Display from "./components/Display.jsx";
 import Experience from "./components/Experience.jsx";
+import Education from "./components/Education.jsx";
 
 function App() {
 	const [name, setName] = useState("");
@@ -12,6 +13,7 @@ function App() {
 	const [telephone, setTelephone] = useState("");
 
 	const [experience, setExperience] = useState({});
+	const [education, setEducation] = useState({});
 
 	const [activeEdit, setEdited] = useState(null);
 
@@ -23,7 +25,7 @@ function App() {
 				<Setting title="Education" clickHandle={setEdited} />
 			</div>
 			<div className="edit">
-				<div hidden={activeEdit !== "#editBasic"}>
+				<div className="editBasic" hidden={activeEdit !== "#editBasic"}>
 					<Basic
 						handleNameChange={setName}
 						handleSurnameChange={setSurname}
@@ -31,8 +33,23 @@ function App() {
 						handleTelephoneChange={setTelephone}
 					/>
 				</div>
-				<div hidden={activeEdit !== "#editExperience"}>
-					<Experience handleExperience={setExperience} experience={experience} />
+				<div
+					className="editExperience"
+					hidden={activeEdit !== "#editExperience"}
+				>
+					<Experience
+						handleExperience={setExperience}
+						experience={experience}
+					/>
+				</div>
+				<div
+					className="editEducation"
+					hidden={activeEdit !== "#editEducation"}
+				>
+					<Education
+						handleEducation={setEducation}
+						education={education}
+					/>
 				</div>
 			</div>
 			<div id="displayContainer">
@@ -42,6 +59,7 @@ function App() {
 					email={email}
 					telephone={telephone}
 					experience={experience}
+					education={education}
 				/>
 			</div>
 		</div>

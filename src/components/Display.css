@@ -1,26 +1,94 @@
 .display {
-    font-size: xx-large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
-    background-color: white;
-    width: 210mm;
-    height: 297mm;
-    zoom: calc(40vw / 297mm);
-    display: grid;
-    grid-template-areas:
-            "sidePanel header header"
-            "sidePanel main main"
-            "sidePanel main main";
-    padding: 50px;    
+	font-size: xx-large;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: black;
+	background-color: white;
+	width: 210mm;
+	height: 297mm;
+	zoom: calc(40vw / 297mm);
+	display: grid;
+
+	grid-template-areas:
+		" sidePanel"
+		" experience"
+		" education";
+	padding: 50px;
 }
 
-#basic{
-    padding: 50px 10px 50px 10px;
-    background-color: aliceblue;
-    grid-area: sidePanel;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+h3 {
+	border-bottom: 2px dotted black;
+}
+h4 {
+	border-bottom: 1px dotted gray;
 }
 
+h1,
+h2,
+h3,
+h4 {
+	margin: 15px 15px;
+	width: 100%;
+	text-align: center;
+}
+
+p {
+	font-size: 0.9em;
+	padding: 5px 4px;
+	width: 100%;
+	text-align: left;
+    margin-bottom: 15px;
+}
+
+#basic {
+	width: 100%;
+	padding: 50px 10px 50px 10px;
+	grid-area: sidePanel;
+	display: grid;
+	gap: 20px;
+	justify-content: space-around;
+	grid-template:
+		"email . telephone" 40px
+		"b fullName c" 40px
+		 / 1fr 1fr 1fr;
+	* {
+		text-align: center;
+
+		font-weight: 500;
+	}
+}
+
+#fullName {
+    grid-area:fullName;
+}
+#telephone {
+    grid-area:telephone;
+}
+#email {
+    grid-area:email;
+}
+
+#experience {
+	grid-area: experience;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+#education {
+	grid-area: education;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+span {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    text-align: center;
+	> p {
+		text-align: center;
+	}
+}
