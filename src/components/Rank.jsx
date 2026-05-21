@@ -1,4 +1,4 @@
-import "./Rank.css";
+import "./styles/Rank.css";
 
 export default function Rank({ descriptory = true }) {
 	return (

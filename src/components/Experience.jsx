@@ -1,4 +1,4 @@
-import "./Experience.css";
+import "./styles/Experience.css";
 
 function ExperienceInput({
 	handleChange,

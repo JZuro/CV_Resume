@@ -1,4 +1,4 @@
-import "./Education.css";
+import "./styles/Education.css";
 
 function EducationInput({ handleChange, education, id = crypto.randomUUID() }) {
 	return (

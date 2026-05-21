@@ -1,4 +1,4 @@
-import "./Basic.css";
+import "./styles/Basic.css";
 
 function BasicInput({
 	title,
