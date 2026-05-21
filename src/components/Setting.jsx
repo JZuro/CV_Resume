@@ -1,3 +1,11 @@
 export default function Setting({ title, clickHandle }) {
-	return <h2 id={`edit${title}`} onClick={() => clickHandle(`#edit${title}`)}>{title}</h2>;
+	return (
+		<div
+			className="setting"
+			id={`edit${title}`}
+			onClick={() => clickHandle(`#edit${title}`)}
+		>
+			<h2>{title}</h2>
+		</div>
+	);
 }

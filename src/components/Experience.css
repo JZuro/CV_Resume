@@ -1,0 +1,46 @@
+#experienceForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+fieldset {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	grid-template-areas:
+		"title button"
+		"description button";
+    width: 350px;
+    border: none;
+    gap: 5px
+    
+}
+
+.experienceTitle {
+	grid-area: title;
+}
+
+.experienceDescription {
+	grid-area: description;
+    height: 100px;
+}
+
+fieldset button {
+	grid-area: button;
+    height: 45px;
+    width: 45px;
+}
+
+#addExperience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 33vw;
+    bottom: 7vh;
+    width: 10vw;
+    height: 60px;
+
+}

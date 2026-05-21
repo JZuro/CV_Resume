@@ -1,8 +1,8 @@
-import "./genericEdit.css";
+import "./Rank.css";
 
-export default function Setting({ descriptory = true, value = null }) {
+export default function Rank({ descriptory = true }) {
 	return (
-		<div className="setting">
+		<div className="Rank">
 			{descriptory ?
 				<input type="text"></input>
 			:	<form>
