@@ -67,11 +67,14 @@ export default function Experience({ handleExperience, experience }) {
 				<button
 					onClick={(event) => {
 						event.preventDefault();
-						handleExperience({
-							...experience,
-							[crypto.randomUUID()]: {},
-						});
+						if (Object.keys(experience).length < 4) {
+							handleExperience({
+								...experience,
+								[crypto.randomUUID()]: {},
+							});
+						}
 					}}
+					disabled={Object.keys(experience).length >= 4}
 					id="addExperience"
 				>
 					Add

@@ -20,7 +20,7 @@
 
 #main {
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr;
+	grid-template-columns: 2fr 4fr 5fr;
 	grid-template-areas: "setting edit display";
 	gap: 16px;
 }
@@ -31,8 +31,10 @@
 .edit {
 	grid-area: edit;
 	display: flex;
-	align-items: center;
+	padding: 25px 0 70px 0;
+	align-items: flex-start;
 	justify-content: center;
+	max-height: 80vh;
 }
 #displayContainer {
 	grid-area: display;
